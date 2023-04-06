@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./find.js"></script>
+    <title>查找</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+        }
+
+        .container {
+            height: 100%;
+            background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+        }
+
+        .login-wrapper {
+            background-color: #fff;
+            width: 358px;
+            height: 588px;
+            border-radius: 15px;
+            padding: 0 50px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .header {
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .input-item {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 0;
+            padding: 10px;
+            border-bottom: 1px solid rgb(128, 125, 125);
+            font-size: 15px;
+            outline: none;
+        }
+
+        .input-item:placeholder {
+            text-transform: uppercase;
+        }
+
+        .btn {
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 40px;
+            background-image: linear-gradient(to right, #a6c1ee, #fbc2eb);
+            color: #fff;
+        }
+
+        .msg {
+            text-align: center;
+            line-height: 88px;
+        }
+
+        a {
+            text-decoration-line: none;
+            color: #abc1ee;
+        }
+
+        .display {
+            display: none;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="div"></div>
+        <div class="login-wrapper">
+            <div class="header">查询</div>
+            <div class="form-wrapper">
+                <h3>请选择查找方式：</h3>
+                <br>
+                <div id="add">
+                    <input type="radio" name="genre" @click="fff = !fff" id="choise_name" value="naem">姓名
+                    <input type="radio" name="genre" @click="fff= !fff" id="choise_card" value="card" >卡号
+
+
+
+                    <input type="text" id="username" placeholder="姓名" v-if="fff" class="input-item">
+                    
+                    <input type="text" id="usercard" placeholder="卡号" v-else="fff" class="input-item">
+                </div>
+                <script src="./vue.min.js"></script>
+                <script>
+                    var vm = new Vue({
+                        el: '#add',
+                        data: {
+                            fff: false
+                        },
+                    })
+                </script>
+
+                <div class="btn" onclick="find();">查询</div>
+                <div class="btn" onclick="cancel();">取消</div>
+                <div class="btn" onclick="back();">返回</div>
+                <br>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

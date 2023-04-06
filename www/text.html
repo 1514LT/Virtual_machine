@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./text.js"></script>
+    <!-- <script src="./vue.min.js"></script> -->
+    <title>Document</title>
+    <!-- <script>
+        var vm = new Vue({
+            el: '#add',
+            data: {
+                fff: true
+
+            },
+        })
+    </script> -->
+</head>   
+<body>
+    <div id="add">
+            <input type="radio" @click="fff=!fff" name="ss" checked>
+            <input type="radio" name="ss" @click="fff=!fff">
+            <input type="text" v-if="fff">wwww</h1>
+            <h1 v-else="fff">qqqq</h1>
+        </div>
+        <script src="./vue.min.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#add',
+                data: {
+                    fff: true
+    
+                },
+            })
+        </script>
+</body>
+
+</html>

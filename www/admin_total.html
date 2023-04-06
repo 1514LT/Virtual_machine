@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员界面</title>
+    <style type="text/css">
+        body {
+            background-color: #D1F2EB;
+            /*浅绿色背景*/
+        }
+
+        form {
+            margin: 50px auto;
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        input[type="submit"] {
+            background-color: #2E86C1;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2471A3;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="modify_password.php" method="POST">
+        <h1>修改密码</h1>
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="password">新密码：</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <input type="submit" value="修改密码">
+    </form>
+</body>
+
+</html>
